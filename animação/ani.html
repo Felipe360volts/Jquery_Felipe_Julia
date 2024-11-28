@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        #caixa{
+            position: relative; /*não funciona animação sem o position*/
+        }
+        #animar{
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(252, 210, 210);
+            border-color: black;
+            height: 30px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="sonic.gif" alt=""id="caixa">
+    </div>
+    <button id="animar">Clique para animar</button>
+
+    <script>
+        $(document).ready(function(){
+            // Ao clicar no botão
+            $("#animar").click(function(){
+                // Anima a "caixa"
+                $("#caixa").animate({
+                    left: '900px',        // Move 900px para a direita
+                }, 500); // 500 milissegundos = 0,5 segundo
+            });
+        });
+    </script>
+</body>
+</html>
